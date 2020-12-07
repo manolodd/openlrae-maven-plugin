@@ -29,16 +29,6 @@ import com.manolodominguez.openlrae.analysis.riskanalysers.RiskAnalyserScarcelyS
 import com.manolodominguez.openlrae.analysis.riskanalysers.RiskAnalyserUnfashionableComponentsLicenses;
 import com.manolodominguez.openlrae.analysis.riskanalysers.RiskAnalyserUnfashionableProjectLicenses;
 import com.manolodominguez.openlrae.arquitecture.Project;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedCompatibilities;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedComponentWeights;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedLicenses;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedLinks;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedObsolescences;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedRedistributions;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedRisks;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedSpreadings;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedTrends;
-import com.manolodominguez.openlrae.baseofknowledge.licenseproperties.LicensesCompatibilityFactory;
 import com.manolodominguez.openlrae.reporting.ReportsFactory;
 import com.manolodominguez.openlrae.reporting.SupportedVerbosityLevel;
 import com.manolodominguez.openlrae.resourceslocators.FilesPaths;
@@ -222,17 +212,17 @@ public class OpenLRAEMPCLIHandler {
     public void showOptions() {
         writeToConsole("");
         writeToConsole("**************************************************************");
-        writeToConsole("Open LIRIC " + new OpenLRAEMPVersionLoader().getVersion());
+        writeToConsole("openlrae-maven-plugin " + new OpenLRAEMPVersionLoader().getVersion());
         writeToConsole("**************************************************************");
         writeToConsole("");
-        writeToConsole("Open LIRIC LIRIC is a software designed to allow an easy control");
+        writeToConsole("openlrae-maven-plugin is a software designed to allow an easy control");
         writeToConsole("of licensing risks. It is opensource, multilanguaje and multiplatform.");
         writeToConsole("");
-        writeToConsole("java -jar [TheSpecificOpenLIRICBinary.jar] -e");
+        writeToConsole("java -jar [TheSpecific-openlrae-maven-plugin-Binary.jar] -e");
         writeToConsole("\tThis will execute a risk analysis using a built-in project example and will show you the resulting risk report as a JSON string.");
         writeToConsole("");
-        writeToConsole("java -jar [TheSpecificOpenLIRICBinary.jar] -a filename");
-        writeToConsole("\tThis will execute a risk analysis of a project that is defined in \"filename\" in JSON format and show you the resulting risk report as a JSON string.\n\tSee Open LIRIC JSON schema for projects to know how to write this project definition in JSON format properly.");
+        writeToConsole("java -jar [TheSpecific-openlrae-maven-plugin-Binary.jar] -a filename");
+        writeToConsole("\tThis will execute a risk analysis of a project that is defined in \"filename\" in JSON format and show you the resulting risk report as a JSON string.\n\tSee OpenLRAE JSON schema for projects to know how to write this project definition in JSON format properly.");
         writeToConsole("");
     }
 
