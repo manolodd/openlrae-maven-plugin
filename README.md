@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/manolodd/openlrae/raw/develop/src/main/resources/com/manolodominguez/openlraemp/logo/logo_openlraemp.png" alt="OpenLRAE Maven Plugin logo" width="400"/></div>
+<div align="center"><img src="https://raw.githubusercontent.com/manolodd/openlrae-maven-plugin/development/src/main/resources/com/manolodominguez/openlraemp/logo/logo_openlraemp.png" alt="OpenLRAE Maven Plugin logo" width="400"/></div>
 
 # PROJECT STATUS (Tested from JDK 9 to 15)
 
@@ -14,7 +14,7 @@
 
 # THE PROJECT
 
-<b>OpenLRAE Maven Plugin</b> is maven plugin that allow you to analize licensing risks of your project's bill of component. It uses [OpenLRAE](https://openlrae.manolodominguez.com) as risk analysis engine, supporting most of its features.
+<b>OpenLRAE Maven Plugin</b> is maven plugin that allows you to analize licensing risks of your project's bill of component. It uses [OpenLRAE](https://openlrae.manolodominguez.com) as risk analysis engine, supporting most of its features.
 
 This plugin adds a new <b>analyse</b> goal that is bound to the <b>compile</b> phase of Maven by default.
 
