@@ -74,7 +74,7 @@ openlrae-maven-plugin-{YourVersion}.jar
 
 OpenLRAE Maven Plugin is quite simple to use. You'll need two things:
 
-1. A file containing the project description that is compliant with the [SON Schema for project definitions](https://raw.githubusercontent.com/manolodd/openlrae/master/src/main/resources/com/manolodominguez/openlrae/json/OpenLRAEJSONSchemaForProjects.json) of OpenLRAE. Put this file wherever you want in your repo. The root folder (When the pom.xml file is) is recommended.
+1. A file containing the project description that is compliant with the [JSON Schema for project definitions](https://raw.githubusercontent.com/manolodd/openlrae/master/src/main/resources/com/manolodominguez/openlrae/json/OpenLRAEJSONSchemaForProjects.json) of OpenLRAE. Put this file wherever you want in your repo. The root folder (When the pom.xml file is) is recommended.
 2. Adding a plugin dependency in your pom.xml and configuring some parameters to tune the analysis for your needs.
 
 Here is a detailed and sefl-explanatory example of what you need to put in your pom.xml:
