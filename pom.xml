@@ -30,7 +30,7 @@
     <artifactId>openlrae-maven-plugin</artifactId>
     <version>0.8</version>
     <packaging>maven-plugin</packaging>
-    <name>OpenLRAE Maven Plugin - A maven plugin to analyse licensing risks from your project's bill of components</name>
+    <name>OpenLRAE Maven Plugin</name>
     <description>OpenLRAE Maven Plugin is a maven plugin designed to allow an easy control of licensing risks taking advantage of OpenLRAE java library. It is opensource, multilanguaje and multiplatform.</description>
     <url>http://openlrae-maven-plugin.manolodominguez.com/</url>
     <licenses>
