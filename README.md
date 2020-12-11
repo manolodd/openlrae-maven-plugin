@@ -205,6 +205,7 @@ OpenLRAE Maven Plugin uses third-party components each one of them having its ow
 
 - mjson 1.4.1 - Apache-2.0 - http://bolerio.github.io/mjson
 - junit-jupiter-engine 5.7.0 - EPL-2.0 - https://junit.org/junit5
+- openlrae-0.8 - Apache-2.0 - https://openlrae.manolodominguez.com
 
 Thanks folks!
 
