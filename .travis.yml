@@ -7,3 +7,14 @@ jdk:
   - openjdk13
   - openjdk14
   - openjdk15
+
+addons:
+  sonarcloud:
+    organization: "manolodd"
+    token:
+      secure: "OEswdMQXAVRRkuwB7cK4Bekqdd7hNHLjLd1kwPTToyvRrhia9xCN3eV1RCWvnziwAXFXHcAVA4NozOSGu7ZltDKTxV3rV0rAOB2p4rlfk8dG2l4JN0UGMdUm3nbK8a8Cbw4vCqWGoxa/+bYxoOTokSElcX1zTma5opsbB7APZvm64lX8txtzFZhYIs2PdBuJMJAFlQonrEYkFmaCLp4ReU35PIPwXo8pDUPg19tD9zOFu1JqnsW5JOZAz42XpYYJF8jpfNi87dfPxjUnweQ5FG/EIWmZ02RE9y1yF/BZY2wg11mhiduMc2BmHkZ5kBUWZMeJzpyzqWW+visoFU9fCaL05h0J5zDkV6saA5TO50pbYfoS7ESU0QSl3lDy5Hpc7abDrouXKAAL+9ORGLcLBmsq4mNj73/5tWvv86qHEgGLeZVclTSVCVxVWQHeMM6ALkVb19/hAe6jUgkn4cElbHtjlpCkSJOJGXVSmFSQDiahfFyocx0wzAh2z4xXJXUYMifbGORbUXlGUtVPiNMUfq0kgcBIjLiftR8qZx8X8UkJO5tyNxIIz+GY6pShqdHXZWqQ0qFAGJHTJLEdrvRGzVsn8ZXZVSOJ56dofdCMYsFtotZYMVTVXr6P29Db6i2jpib1nXhkzur2GwpCpvUYFLvOIqudeTq6/CeRZg/ZmLM="
+
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=manolodd_openlrae-maven-plugin -Dsonar.scanner.force-deprecated-java-version=true
