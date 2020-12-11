@@ -83,7 +83,7 @@ Here is a detailed and sefl-explanatory example of what you need to put in your 
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>${openlrae.maven.plugin}</version>
+    <version>0.8</version>
     <executions>
         <execution>
             <goals>
