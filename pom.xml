@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>0.9</version>
+    <version>0.10-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <name>OpenLRAE Maven Plugin</name>
     <description>OpenLRAE Maven Plugin is a maven plugin designed to allow an easy control of licensing risks taking advantage of OpenLRAE java library. It is opensource, multilanguaje and multiplatform.</description>
