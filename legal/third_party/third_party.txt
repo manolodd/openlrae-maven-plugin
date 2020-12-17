@@ -1,0 +1,8 @@
+openlrae-maven-plugin uses third-party components each one of them having its 
+own OSS license. License compatibility has been taken into account to allow 
+openlrae-maven-plugin be released under its current OSS licence. They are:
+
+- mjson 1.4.1 - Apache-2.0 - http://bolerio.github.io/mjson
+- junit-jupiter-engine 5.7.0 - EPL-2.0 - https://junit.org/junit5
+
+Thanks folks!

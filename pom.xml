@@ -124,7 +124,11 @@
                     <compilerArgs>
                         <arg>-Xlint:all,-options,-path</arg>
                     </compilerArgs>
-                </configuration>
+                    <excludes>
+                        <exclude>**/*.png</exclude>
+                        <exclude>**/*.jpg</exclude>
+                        <exclude>**/*.xcf</exclude>
+                    </excludes>                </configuration>
             </plugin>     
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
