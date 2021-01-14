@@ -1,6 +1,6 @@
 <div align="center"><img src="https://raw.githubusercontent.com/manolodd/openlrae-maven-plugin/development/src/main/resources/com/manolodominguez/openlraemp/logo/logo_openlraemp.png" alt="OpenLRAE Maven Plugin logo" width="400"/></div>
 
-# PROJECT STATUS (Tested from JDK 9 to 15)
+# PROJECT STATUS
 
 ## Master branch
 
