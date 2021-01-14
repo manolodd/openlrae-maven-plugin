@@ -6,7 +6,7 @@
 
 [![Build Status](https://img.shields.io/travis/manolodd/openlrae-maven-plugin/master.svg)](https://travis-ci.org/manolodd/openlrae-maven-plugin?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=manolodd_openlrae-maven-plugin&branch=master&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=manolodd_openlrae-maven-plugin)
-[![Maven Central](https://img.shields.io/maven-central/v/com.manolodominguez/openlrae-maven-plugin)](https://search.maven.org/artifact/com.manolodominguez/openlrae-maven-plugin/1.0/jar)
+[![Maven Central](https://img.shields.io/maven-central/v/com.manolodominguez/openlrae-maven-plugin)](https://search.maven.org/artifact/com.manolodominguez/openlrae-maven-plugin/1.1/jar)
 
 ## Develop branch
 
@@ -24,12 +24,12 @@ This plugin adds a new <b>analyse</b> goal that is bound to the <b>compile</b> p
 
 ## Latest snapshot version being developed:
  
-- <b>OpenLRAE Maven Plugin 1.1-SNAPSHOT</b> (development branch) - Apache-2.0.
+- <b>OpenLRAE Maven Plugin 1.2-SNAPSHOT</b> (development branch) - Apache-2.0.
 
 ## Binary releases:
 
-- <b>OpenLRAE Maven Plugin 1.0</b> (current, master branch) - Apache-2.0.
-- <b>OpenLRAE Maven Plugin from 0.8 to 0.9</b> - Apache-2.0.
+- <b>OpenLRAE Maven Plugin 1.1</b> (current, master branch) - Apache-2.0.
+- <b>OpenLRAE Maven Plugin from 0.8 to 1.0</b> - Apache-2.0.
 
 # PEOPLE BEHIND OPENLRAE
 
@@ -44,7 +44,7 @@ You can download latest compiled stable releases from the releases section of th
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </plugin>
 ```
 There are options to configure you can see in HOW TO USE THE PLUGIN section.
@@ -85,7 +85,7 @@ Here is a detailed and sefl-explanatory example of what you need to put in your 
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <executions>
         <execution>
             <goals>
@@ -169,7 +169,7 @@ Of course, this is a complete example. A more usual one could be:
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <executions>
         <execution>
             <goals>
@@ -186,7 +186,7 @@ Of course, this is a complete example. A more usual one could be:
     </configuration>
 </plugin>    
 ```
-With this example, openlrae-maven-plugin will load the project definition from a 'project.json' file (the default value) that has to be located at the root of the repo. And will analyse two licensing risk:
+In this example, openlrae-maven-plugin will load the project definition from a 'project.json' file (the default value) that has to be located at the root of the repo. And will analyse two licensing risk:
 
 1. HAVING_COMPONENTS_LICENSES_INCOMPATIBLE_WITH_PROJECT_LICENSES, whose risk value should not exceed 0.
 2. HAVING_COMPONENTS_LICENSES_MISALIGNED_FROM_PROJECT_LICENSES, whose risk value should not exceed 0.5.
@@ -207,7 +207,7 @@ OpenLRAE Maven Plugin uses third-party components each one of them having its ow
 
 - mjson 1.4.1 - Apache-2.0 - http://bolerio.github.io/mjson
 - junit-jupiter-engine 5.7.0 - EPL-2.0 - https://junit.org/junit5
-- openlrae-1.0 - Apache-2.0 - https://openlrae.manolodominguez.com
+- openlrae-1.1 - Apache-2.0 - https://openlrae.manolodominguez.com
 
 Thanks folks!
 
