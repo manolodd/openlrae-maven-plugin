@@ -21,7 +21,7 @@
         <!--- Build parameters -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>9</maven.compiler.release> 
-        <!-- About this version of OpenLRAE -->
+        <!-- About this version of OpenLRAE Maven Plugin -->
         <openlrae-maven-plugin.license>Apache-2.0</openlrae-maven-plugin.license>
         <openlrae-maven-plugin.version>1.2</openlrae-maven-plugin.version>
     </properties>
