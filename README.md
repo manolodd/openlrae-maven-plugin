@@ -6,7 +6,7 @@
 
 [![Build Status](https://img.shields.io/travis/manolodd/openlrae-maven-plugin/master.svg)](https://travis-ci.org/manolodd/openlrae-maven-plugin?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=manolodd_openlrae-maven-plugin&branch=master&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=manolodd_openlrae-maven-plugin)
-[![Maven Central](https://img.shields.io/maven-central/v/com.manolodominguez/openlrae-maven-plugin)](https://search.maven.org/artifact/com.manolodominguez/openlrae-maven-plugin/1.1/jar)
+[![Maven Central](https://img.shields.io/maven-central/v/com.manolodominguez/openlrae-maven-plugin)](https://search.maven.org/artifact/com.manolodominguez/openlrae-maven-plugin/1.2/jar)
 
 ## Develop branch
 
@@ -24,12 +24,12 @@ This plugin adds a new <b>analyse</b> goal that is bound to the <b>compile</b> p
 
 ## Latest snapshot version being developed:
  
-- <b>OpenLRAE Maven Plugin 1.2-SNAPSHOT</b> (development branch) - Apache-2.0.
+- <b>OpenLRAE Maven Plugin 1.3-SNAPSHOT</b> (development branch) - Apache-2.0.
 
 ## Binary releases:
 
-- <b>OpenLRAE Maven Plugin 1.1</b> (current, master branch) - Apache-2.0.
-- <b>OpenLRAE Maven Plugin from 0.8 to 1.0</b> - Apache-2.0.
+- <b>OpenLRAE Maven Plugin 1.2</b> (current, master branch) - Apache-2.0.
+- <b>OpenLRAE Maven Plugin from 0.8 to 1.1</b> - Apache-2.0.
 
 # PEOPLE BEHIND OPENLRAE
 
@@ -44,7 +44,7 @@ You can download latest compiled stable releases from the releases section of th
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 </plugin>
 ```
 There are options to configure you can see in HOW TO USE THE PLUGIN section.
@@ -85,7 +85,7 @@ Here is a detailed and sefl-explanatory example of what you need to put in your 
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <executions>
         <execution>
             <goals>
@@ -169,7 +169,7 @@ Of course, this is a complete example. A more usual one could be:
 <plugin>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <executions>
         <execution>
             <goals>
