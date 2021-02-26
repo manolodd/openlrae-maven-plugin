@@ -5,7 +5,7 @@
         <mjson.version>1.4.1</mjson.version>
         <openlrae.version>1.5</openlrae.version>
         <!--- Dependency for testing -->
-        <junit-jupiter-engine.version>5.7.0</junit-jupiter-engine.version>
+        <junit-jupiter-engine.version>5.8.0-M1</junit-jupiter-engine.version>
         <!-- Maven plugins versions -->
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.enforcer.plugin.version>3.0.0-M3</maven.enforcer.plugin.version>
@@ -23,13 +23,13 @@
         <maven.compiler.release>9</maven.compiler.release> 
         <!-- About this version of OpenLRAE Maven Plugin -->
         <openlrae-maven-plugin.license>Apache-2.0</openlrae-maven-plugin.license>
-        <openlrae-maven-plugin.version>1.5-SNAPSHOT</openlrae-maven-plugin.version>
+        <openlrae-maven-plugin.version>1.5</openlrae-maven-plugin.version>
     </properties>
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.5</version>
     <packaging>maven-plugin</packaging>
     <name>OpenLRAE Maven Plugin</name>
     <description>OpenLRAE Maven Plugin is a maven plugin designed to allow an easy control of licensing risks taking advantage of OpenLRAE java library. It is opensource, multilanguaje and multiplatform.</description>
