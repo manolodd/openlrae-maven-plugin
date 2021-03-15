@@ -22,8 +22,8 @@
         },
         {
             "component": "openlrae",
-            "version": "1.5",
-            "license": "APACHE_2_0",
+            "version": "2.0",
+            "license": "LGPL_3_0_OR_LATER",
             "weight": "HIGH",
             "link": "DYNAMIC"
         }
