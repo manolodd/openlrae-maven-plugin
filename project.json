@@ -1,7 +1,7 @@
 {
     "projectinfo": {
         "name": "OpenLRAE Maven Plugin",
-        "version": "1.5",
+        "version": "2.0-SNAPSHOT",
         "redistribution": "SOFTWARE_PACKAGE_OR_SAAS",
         "licenses": ["APACHE_2_0"]
     },
