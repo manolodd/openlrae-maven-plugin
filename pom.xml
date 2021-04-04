@@ -3,7 +3,7 @@
     <properties>
         <!--- Dependency versions -->
         <mjson.version>1.4.1</mjson.version>
-        <openlrae.version>2.0</openlrae.version>
+        <openlrae.version>2.1</openlrae.version>
         <!--- Dependency for testing -->
         <junit-jupiter-engine.version>5.8.0-M1</junit-jupiter-engine.version>
         <!-- Maven plugins versions -->
