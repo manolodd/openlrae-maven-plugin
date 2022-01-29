@@ -206,10 +206,8 @@ OpenLRAE Maven Plugin is based on the same version of OpenLRAE. The features sup
 OpenLRAE Maven Plugin uses third-party components each one of them having its own OSS license. License compatibility has been taken into account to allow OpenLRAE Maven Plugin to be released under its current OSS licence. They are:
 
 - mjson 1.4.1 - Apache-2.0 - http://bolerio.github.io/mjson
-- junit-jupiter-engine 5.8.2 - EPL-2.0 - https://junit.org/junit5
+- junit-jupiter-engine 5.8.7 - EPL-2.0 - https://junit.org/junit5
 - openlrae-2.2 - LGPL-3.0-or-later - https://openlrae.manolodominguez.com
-- lsf4j-api 2.0.0-alpha6 - MIT - https://www.slf4j.org
-- lsf4j-simple 2.0.0-alpha6 - MIT - https://www.slf4j.org
 
 Thanks folks!
 
