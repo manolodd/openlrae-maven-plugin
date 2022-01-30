@@ -22,7 +22,7 @@
         },
         {
             "component": "openlrae",
-            "version": "2.2",
+            "version": "2.3",
             "license": "LGPL_3_0_OR_LATER",
             "weight": "HIGH",
             "link": "DYNAMIC"
