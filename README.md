@@ -4,13 +4,13 @@
 
 ## Master branch
 
-[![Build Status](https://img.shields.io/travis/manolodd/openlrae-maven-plugin/master.svg)](https://travis-ci.org/manolodd/openlrae-maven-plugin?branch=master)
+[![Build Status](https://img.shields.io/travis/manolodd/openlrae-maven-plugin/master.svg)](https://app.travis-ci.com/github/manolodd/openlrae-maven-plugin/builds)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=manolodd_openlrae-maven-plugin&branch=master&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=manolodd_openlrae-maven-plugin)
 [![Maven Central](https://img.shields.io/maven-central/v/com.manolodominguez/openlrae-maven-plugin)](https://search.maven.org/artifact/com.manolodominguez/openlrae-maven-plugin/2.2/jar)
 
 ## Develop branch
 
-[![Build Status](https://img.shields.io/travis/manolodd/openlrae-maven-plugin/development.svg)](https://travis-ci.org/manolodd/openlrae-maven-plugin?branch=development)
+[![Build Status](https://img.shields.io/travis/manolodd/openlrae-maven-plugin/development.svg)](https://app.travis-ci.com/github/manolodd/openlrae-maven-plugin/builds)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=manolodd_openlrae-maven-plugin&branch=development&metric=alert_status)](https://sonarcloud.io/dashboard?branch=development&id=manolodd_openlrae-maven-plugin)
 [![Maven Central](https://img.shields.io/badge/maven--central-Not%20available-inactive)](#)
 
