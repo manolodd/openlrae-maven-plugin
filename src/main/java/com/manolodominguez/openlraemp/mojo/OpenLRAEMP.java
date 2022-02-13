@@ -45,7 +45,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Locale;
-import mjson.Json;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -147,7 +146,7 @@ public class OpenLRAEMP extends AbstractMojo {
                             }
                         }
                         getLog().info("Loading project definition from '" + projectDefinitionFile + "'");
-                        project = new Project(Json.read(file.toURI().toURL()));
+                        project = new Project(file.toURI().toURL());
                         getLog().info("Project definition loaded!");
                         getLog().info("Configuring license risk analysers...");
                         // Define desired risk analysers we want to use for this 
