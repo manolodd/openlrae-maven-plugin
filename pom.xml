@@ -17,19 +17,19 @@
         <maven.plugin.annotations.version>3.6.4</maven.plugin.annotations.version>
         <maven.plugin.plugin.version>3.6.0</maven.plugin.plugin.version>
         <jacoco.maven.plugin.version>0.8.7</jacoco.maven.plugin.version>
-        <openlrae.maven.plugin>2.2</openlrae.maven.plugin>
+        <openlrae.maven.plugin>2.3</openlrae.maven.plugin>
         <!--- Build parameters -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>9</maven.compiler.release> 
         <!-- About this version of OpenLRAE Maven Plugin (used for properties filtering) -->
         <openlrae-maven-plugin.license>Apache-2.0</openlrae-maven-plugin.license>
-        <openlrae-maven-plugin.version>3.0-SNAPSHOT</openlrae-maven-plugin.version>
+        <openlrae-maven-plugin.version>3.0</openlrae-maven-plugin.version>
     </properties>
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <version>3.0</version>
     <packaging>maven-plugin</packaging>
     <name>OpenLRAE Maven Plugin</name>
     <description>OpenLRAE Maven Plugin is a maven plugin designed to allow an easy control of licensing risks taking advantage of OpenLRAE java library. It is opensource, multilanguaje and multiplatform.</description>
