@@ -205,8 +205,8 @@ OpenLRAE Maven Plugin is based on the same version of OpenLRAE. The features sup
 
 OpenLRAE Maven Plugin uses third-party components each one of them having its own OSS license. License compatibility has been taken into account to allow OpenLRAE Maven Plugin to be released under its current OSS licence. They are:
 
-- everit-json-schema 1.14.0 - Apache-2.0 - https://github.com/everit-org/json-schema
-- junit-jupiter-engine 5.8.7 - EPL-2.0 - https://junit.org/junit5
+- everit-json-schema 1.14.1 - Apache-2.0 - https://github.com/everit-org/json-schema
+- junit-jupiter-engine 5.9.1 - EPL-2.0 - https://junit.org/junit5
 - openlrae-3.0 - LGPL-3.0-or-later - https://openlrae.manolodominguez.com
 
 Thanks folks!
