@@ -1,7 +1,7 @@
 {
     "projectinfo": {
         "name": "OpenLRAE Maven Plugin",
-        "version": "3.1",
+        "version": "3.2-SNAPSHOT",
         "redistribution": "SOFTWARE_PACKAGE_OR_SAAS",
         "licenses": ["APACHE_2_0"]
     },
@@ -22,7 +22,7 @@
         },
         {
             "component": "openlrae",
-            "version": "2.3",
+            "version": "3.1",
             "license": "LGPL_3_0_OR_LATER",
             "weight": "HIGH",
             "link": "DYNAMIC"
