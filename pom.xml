@@ -3,7 +3,7 @@
     <properties>
         <!--- Dependency versions -->
         <everit-json-schema.version>1.14.1</everit-json-schema.version>
-        <openlrae.version>3.0</openlrae.version>
+        <openlrae.version>3.1</openlrae.version>
         <!--- Dependency for testing -->
         <junit-jupiter-engine.version>5.9.1</junit-jupiter-engine.version>
         <!-- Maven plugins versions -->
@@ -23,13 +23,13 @@
         <maven.compiler.release>9</maven.compiler.release> 
         <!-- About this version of OpenLRAE Maven Plugin (used for properties filtering) -->
         <openlrae-maven-plugin.license>Apache-2.0</openlrae-maven-plugin.license>
-        <openlrae-maven-plugin.version>3.1-SNAPSHOT</openlrae-maven-plugin.version>
+        <openlrae-maven-plugin.version>3.1</openlrae-maven-plugin.version>
     </properties>
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.manolodominguez</groupId>
     <artifactId>openlrae-maven-plugin</artifactId>
-    <version>3.1-SNAPSHOT</version>
+    <version>3.1</version>
     <packaging>maven-plugin</packaging>
     <name>OpenLRAE Maven Plugin</name>
     <description>OpenLRAE Maven Plugin is a maven plugin designed to allow an easy control of licensing risks taking advantage of OpenLRAE java library. It is opensource, multilanguaje and multiplatform.</description>

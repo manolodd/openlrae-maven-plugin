@@ -30,7 +30,7 @@ import com.manolodominguez.openlrae.analysis.riskanalysers.RiskAnalyserScarcelyS
 import com.manolodominguez.openlrae.analysis.riskanalysers.RiskAnalyserUnfashionableComponentsLicenses;
 import com.manolodominguez.openlrae.analysis.riskanalysers.RiskAnalyserUnfashionableProjectLicenses;
 import com.manolodominguez.openlrae.arquitecture.Project;
-import com.manolodominguez.openlrae.baseofknowledge.basevalues.SupportedRisks;
+import com.manolodominguez.openlrae.bok.basevalues.SupportedRisks;
 import com.manolodominguez.openlrae.reporting.ReportsFactory;
 import com.manolodominguez.openlrae.reporting.SupportedVerbosityLevel;
 import java.io.File;
