@@ -51,6 +51,8 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class implementas a Mojo that, using OpenLRAE library, do licensing
@@ -81,6 +83,8 @@ public class OpenLRAEMP extends AbstractMojo {
     @Parameter(defaultValue = "${project.build.directory}", readonly = true)
     private String pathForReports;
 
+    final Logger logger = LoggerFactory.getLogger(OpenLRAEMP.class);
+
     @Override
     public synchronized void execute() throws MojoExecutionException, MojoFailureException {
 
@@ -106,25 +110,25 @@ public class OpenLRAEMP extends AbstractMojo {
         reportPathAndFilename = pathForReports + File.separator + "report-" + currentMoment + "-" + projectDefinitionFile;
 
         if (projectDefinitionFile == null) {
-            getLog().error("fileName cannot be null");
+            logger.error("fileName cannot be null");
             throw new MojoFailureException("fileName cannot be null");
         }
         projectDefinitionFile = projectDefinitionFile.trim();
         if (projectDefinitionFile.isEmpty()) {
-            getLog().error("fileName cannot be blank");
+            logger.error("fileName cannot be blank");
             throw new MojoFailureException("fileName cannot be blank");
         }
         File file = new File(projectDefinitionFile);
         if (!file.exists()) {
-            getLog().error(projectDefinitionFile + " not found");
+            logger.error(projectDefinitionFile + " not found");
             throw new MojoFailureException(projectDefinitionFile + " not found");
         } else {
             if (!file.isFile()) {
-                getLog().error(projectDefinitionFile + " is not a file");
+                logger.error(projectDefinitionFile + " is not a file");
                 throw new MojoFailureException(projectDefinitionFile + " is not a file");
             } else {
                 if (!file.canRead()) {
-                    getLog().error(projectDefinitionFile + " is unreadable");
+                    logger.error(projectDefinitionFile + " is unreadable");
                     throw new MojoFailureException(projectDefinitionFile + " is unreadable");
                 } else {
                     try {
@@ -145,10 +149,10 @@ public class OpenLRAEMP extends AbstractMojo {
                                 throw new MojoFailureException("The value " + "'" + riskThresholds.get(riskAsString) + "' specified for risk '" + riskAsString + "' is not valid. It has to be a float value between 0.0 and 1.0");
                             }
                         }
-                        getLog().info("Loading project definition from '" + projectDefinitionFile + "'");
+                        logger.info("Loading project definition from '" + projectDefinitionFile + "'");
                         project = new Project(file.toURI().toURL());
-                        getLog().info("Project definition loaded!");
-                        getLog().info("Configuring license risk analysers...");
+                        logger.info("Project definition loaded!");
+                        logger.info("Configuring license risk analysers...");
                         // Define desired risk analysers we want to use for this 
                         // project in this case, all are used by default.
                         riskAnalyser1 = new RiskAnalyserLimitedSetOfPotentialProjectLicenses(project);
@@ -182,58 +186,58 @@ public class OpenLRAEMP extends AbstractMojo {
                                 riskAnalysisEngine.getRisksAnalysers().remove(auxRiskAnalyser);
                             }
                         }
-                        getLog().info("License risk analysers configured!");
+                        logger.info("License risk analysers configured!");
                         // Do the licensing risk analysis. 
-                        getLog().info("Configuring reporting language...");
+                        logger.info("Configuring reporting language...");
                         riskAnalysisEngine.setLanguage(Locale.forLanguageTag(reportLanguage));
-                        getLog().info("Reporting language set to " + riskAnalysisEngine.getLanguage().toString());
-                        getLog().info("Analysing " + riskAnalysisEngine.getRisksAnalysers().size() + " licensing risks on project '" + project.getName() + "', with " + project.getBillOfComponentBindings().size() + " components and " + project.getLicenses().size() + " project license(s)...");
+                        logger.info("Reporting language set to " + riskAnalysisEngine.getLanguage().toString());
+                        logger.info("Analysing " + riskAnalysisEngine.getRisksAnalysers().size() + " licensing risks on project '" + project.getName() + "', with " + project.getBillOfComponentBindings().size() + " components and " + project.getLicenses().size() + " project license(s)...");
                         RiskAnalysisResult[] resultSet = riskAnalysisEngine.analyse();
-                        getLog().info("Licensing risks analysis finished");
+                        logger.info("Licensing risks analysis finished");
                         // Check whether the thresholds definded in the pom 
                         // file, have been exceeded or not. 
-                        getLog().info("Risk thresholds checking...");
+                        logger.info("Risk thresholds checking...");
                         boolean thresholdExceeded = false;
                         for (RiskAnalysisResult riskAnalysisResult : resultSet) {
                             SupportedRisks risk = riskAnalysisResult.getRiskType();
                             float riskValue = riskAnalysisResult.getRiskValue();
                             float riskThreshold = convertedRiskThresholds.get(risk);
                             if (riskValue > riskThreshold) {
-                                getLog().info("\tThreshold for " + risk.toString() + " is " + riskThreshold + ". Real risk value is " + riskValue + " -- BUILD WILL FAIL!");
+                                logger.info("\tThreshold for " + risk.toString() + " is " + riskThreshold + ". Real risk value is " + riskValue + " -- BUILD WILL FAIL!");
                                 thresholdExceeded = true;
                             } else {
-                                getLog().info("\tThreshold for " + risk.toString() + " is " + riskThreshold + ". Real risk value is " + riskValue + " -- OK");
+                                logger.info("\tThreshold for " + risk.toString() + " is " + riskThreshold + ". Real risk value is " + riskValue + " -- OK");
                             }
                         }
                         if (thresholdExceeded) {
                             throw new MojoFailureException("At least one of the defined thresholds has been exceeded.");
                         }
-                        getLog().info("Risk thresholds checking done!");
+                        logger.info("Risk thresholds checking done!");
                         // Generate an internationalized licensing risk analysis
                         // report, to be shown or to be stored. 
                         if (saveReport || showReport) {
-                            getLog().info("Generating JSON report...");
+                            logger.info("Generating JSON report...");
                             if (saveReport) {
-                                getLog().info("JSON report generated!");
-                                getLog().info("Saving report...");
-                                try (OutputStream outputStream = new FileOutputStream(reportPathAndFilename)) {
+                                logger.info("JSON report generated!");
+                                logger.info("Saving report...");
+                                try ( OutputStream outputStream = new FileOutputStream(reportPathAndFilename)) {
                                     outputStreamWriter = new OutputStreamWriter(outputStream, DEFAULT_REPORT_ENCONDING);
                                     outputStreamWriter.write(ReportsFactory.getInstance(SupportedVerbosityLevel.DETAILED).getReportAsBeautifiedJSONString(project, resultSet));
                                     outputStreamWriter.close();
-                                    getLog().info("JSON report saved at '" + reportPathAndFilename + "'!");
+                                    logger.info("JSON report saved at '" + reportPathAndFilename + "'!");
                                 } catch (FileNotFoundException | SecurityException ex) {
-                                    getLog().error("JSON report '" + reportPathAndFilename + "' cannot be saved. Skipping this step.");
+                                    logger.error("JSON report '" + reportPathAndFilename + "' cannot be saved. Skipping this step.");
                                 }
                             }
                             if (showReport) {
-                                getLog().info("JSON report generated!");
-                                getLog().info("Showing report...");
-                                getLog().info(ReportsFactory.getInstance(SupportedVerbosityLevel.DETAILED).getReportAsBeautifiedJSONString(project, resultSet));
-                                getLog().info("JSON report finished!");
+                                logger.info("JSON report generated!");
+                                logger.info("Showing report...");
+                                logger.info(ReportsFactory.getInstance(SupportedVerbosityLevel.DETAILED).getReportAsBeautifiedJSONString(project, resultSet));
+                                logger.info("JSON report finished!");
                             }
                         }
                     } catch (IOException | NumberFormatException ex) {
-                        getLog().error(projectDefinitionFile + "is not a correct JSON project definition complanint with OpenLRAE JSON Schema for project definition.");
+                        logger.error(projectDefinitionFile + "is not a correct JSON project definition complanint with OpenLRAE JSON Schema for project definition.");
                         throw new MojoFailureException("is not a correct JSON project definition complanint with OpenLRAE JSON Schema for project definition.");
                     }
                 }
